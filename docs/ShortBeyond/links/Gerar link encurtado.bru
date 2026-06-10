@@ -1,0 +1,27 @@
+meta {
+  name: Gerar link encurtado
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3333/api/links
+  body: json
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMDFLVFM2UTNLUkI3UDZHNk1HNzdDQkRXSEgiLCJleHAiOjE3ODExOTYyNjIsImlhdCI6MTc4MTEwOTg2Mn0.6HicWsUhb4jiqi6cYBe4MMB9xnNiEhLL5ngFY_AAPqY
+}
+
+body:json {
+  {
+    "original_url": "https://www.exemplo.com/uma-url-muito-longa-que-precisa-ser-encurtada",
+    "title": "Exemplo de Site"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
