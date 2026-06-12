@@ -1,24 +1,17 @@
 meta {
-  name: Gerar link encurtado
+  name: Deletar links encurtados
   type: http
-  seq: 1
+  seq: 3
 }
 
-post {
-  url: http://localhost:3333/api/links
+delete {
+  url: http://localhost:3333/api/links/01KTS6SR2HM4GQG2RW7HEW9KJQ
   body: json
   auth: inherit
 }
 
 headers {
   Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMDFLVFM2UTNLUkI3UDZHNk1HNzdDQkRXSEgiLCJleHAiOjE3ODExOTYyNjIsImlhdCI6MTc4MTEwOTg2Mn0.6HicWsUhb4jiqi6cYBe4MMB9xnNiEhLL5ngFY_AAPqY
-}
-
-body:json {
-  {
-    "original_url": "://exemplo.com/uma-url-muito-longa-que-precisa-ser-encurtada",
-    "title": "567657657 6756 65fgn$$$$$$$$$$$$$$$$bfvbdfgref "
-  }
 }
 
 settings {
